@@ -3,10 +3,10 @@ import React from 'react'
 export default class TodoBox extends React.Component {
   render() {
     return (
-      <div className="todoBox">
-	<h1>Todos</h1>
-	<TodoList data={this.props.data} />
-	<TodoForm />
+      <div className='todoBox'>
+        <h1>Todos</h1>
+        <TodoList data={this.props.data} />
+        <TodoForm />
       </div>
     )
   }
@@ -16,12 +16,12 @@ class TodoList extends React.Component {
   render() {
     var todo = this.props.data.map(todo => <Todo title={todo.title} key={todo.title}>{todo.detail}</Todo>)
     return (
-      <div className="todoList">
-	<table style={style.table}>
-	  <tbody>
-      {todo}
-	  </tbody>
-	</table>
+      <div className='todoList' >
+        <table style={style.table} >
+          <tbody >
+            {todo}
+          </tbody>
+        </table>
       </div>
     )
   }
@@ -36,11 +36,11 @@ class Todo extends React.Component {
   render() {
     return (
       <tr>
-	<td style={style.tableContent}>
-	  <input type="checkbox" checked={this.state.checked} onChange={this.handleChange.bind(this)}/>
-	</td>
-	<td style={style.tableContent}>{this.props.title}</td>
-	<td style={style.tableContent}>{this.props.children}</td>
+        <td style={style.tableContent} >
+          <input type='checkbox' checked={this.state.checked} onChange={this.handleChange.bind(this)} />
+        </td>
+        <td style={style.tableContent} >{ this.props.title }</td>
+        <td style={style.tableContent} >{ this.props.children }</td>
       </tr>
     )
   }
@@ -56,8 +56,8 @@ Todo.propTypes = {
 class TodoForm extends React.Component {
   render() {
     return (
-      <div className="todoForm">
-	I am a TodoForm.
+      <div className='todoForm'>
+	      I am a TodoForm.
       </div>
     )
   }
